@@ -1,0 +1,596 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    </head>
+    <body>
+
+        <div id="hud-container">
+        <!-- zetka -->
+        <div class="scoreboard" style="display: none;">
+            <div class="row1">
+                <div class="players">
+                    <img src="./img/scoreboard/players.png">
+                    <div class="count">0</div>
+                    <div class="max-players">/0</div>
+                </div>
+                <div class="factions">
+                    <div class="faction police">
+                        <img src="./img/scoreboard/police.png">
+                        <div class="count">0</div>
+                    </div>
+                    <div class="faction ems">
+                        <img src="./img/scoreboard/ems.png">
+                        <div class="count">0</div>
+                    </div>
+                    <div class="faction doj">
+                        <img src="./img/scoreboard/doj.png">
+                        <div class="count">0</div>
+                    </div>
+                    <div class="faction mech">
+                        <img src="./img/scoreboard/mech.png">
+                        <div class="count">0</div>
+                    </div>
+                    <!-- <div class="faction taxi">
+                        <img src="./img/scoreboard/taxi.png">
+                        <div class="count">0</div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- DÓŁ ŚRODEK -->
+            <div id="bottom-center-container">
+                <!-- oxygen -->
+                <div id="oxygen-level-container">
+                    <div class="oxygen-level-inner-container">
+                        <div class="oxygen-level-header">
+                            <div>
+                                <img src="img/oxygen.svg">
+                            </div> 
+                            <div>
+                                Tlen w płucach
+                            </div>
+                        </div>
+                        <div id="oxygen-level-value">
+
+                        </div>
+                    </div>
+                    <div id="oxygen-level-progressbar-container">
+                        <div id="oxygen-level-progressbar">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- biały progress bar -->
+                <div id="progressbar-white-container">
+                    <div id="progressbar-white-title">
+                    </div>
+                    <div id="progressbar-white-background">
+                        <div id="progressbar-white">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- używanie itemków progress bar -->
+                <div id="progressbar-usage-container">
+                        <div class="progressbar-usage">
+                            <div class="progressbar-usage-flex">
+                                <div class="progressbar-usage-background">
+                                    <div class="progressbar-usage-bar">
+
+                                    </div>
+                                </div>
+                                <div class="progressbar-usage-title-background">
+                                    <img class="progressbar-usage-img" src="img/logo.png">
+                                    <div class="progressbar-usage-title-container">
+                                        <div class="progressbar-usage-title">
+                                            Użyto
+                                        </div>
+                                        <div class="progressbar-usage-title2">
+                                            pizza z dżalapenio
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <!-- stats -->
+                <div id="status">
+                </div>
+                <div></div>
+                <!-- item slots -->
+                <div id="item-slots">
+                    <div class="item-slot" id="item-slot-1">
+                        <img src="" style="display:none">
+                        <div class="item-slot-background">
+
+                        </div>
+                        <div class="item-slot-number">
+                            1
+                        </div>
+                    </div>
+                    <div class="item-slot" id="item-slot-2">
+                        <img src="" style="display:none">
+                        <div class="item-slot-background">
+
+                        </div>
+                        <div class="item-slot-number">
+                            2
+                        </div>
+                    </div>
+                    <div class="item-slot" id="item-slot-3">
+                        <img src="" style="display:none">
+                        <div class="item-slot-background">
+
+                        </div>
+                        <div class="item-slot-number">
+                            3
+                        </div>
+                    </div>
+                    <div class="item-slot" id="item-slot-4">
+                        <img src="" style="display:none">
+                        <div class="item-slot-background">
+
+                        </div>
+                        <div class="item-slot-number">
+                            4
+                        </div>
+                    </div>
+                    <div class="item-slot" id="item-slot-5">
+                        <img src="" style="display:none">
+                        <div class="item-slot-background">
+
+                        </div>
+                        <div class="item-slot-number">
+                            5
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ŚRODEK LEWO ( NOTIFKI )-->
+            <div id="notif-container">
+                <div class="notif">
+                    <div class="notif-flex">
+                        <img class='notif-img' src="img/notif/notifRed.svg">
+                        <div class="notif-inner">
+                            <div class="notif-title">
+                                <!-- Notification -->
+                            </div>
+                            <div class="notif-desc">
+                                <!-- Example text are here, hello everyone, hello world! -->
+                            </div>
+                        </div> 
+                        <svg
+                            class="notif-progressbar"
+                            >
+                            <circle
+                                stroke="#FFFFFF40"
+                                stroke-width="0.24vh"
+                                fill="transparent"
+                                r="0.7vh"
+                                cx="1vh"
+                                cy="1vh"
+                            />
+                            <circle
+                                class="notif-progressbar-circle"
+                                stroke="#ffffff"
+                                stroke-width="0.24vh"
+
+                                fill="transparent"
+                                r="0.7vh"
+                                cx="1vh"
+                                cy="1vh"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- podpowiedzi klawiszy -->
+            <div id='keys-info-container'>
+
+            </div>
+            <!---------- prawy górny róg ---------->
+            <div id="top-right-container">
+                <!-- logo, id, mic -->
+                <div id="info-container">
+                    <div id="info-container-inner">
+                        <div id="mic-info-container">
+                            <img id="mic-img" src="img/mic.svg">
+                            <div class='mic-level-container'>
+                                <div id="mic-level">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="player-info-container">
+                            <div class="player-info-row">
+                                <div class="player-info-label">
+                                    id
+                                </div>
+                                <div class="player-info-value">
+                                    <div class="player-info-digit" id="id-digit-1">
+                                        0
+                                    </div>
+                                    <div class="player-info-digit" id="id-digit-2">
+                                        0
+                                    </div>
+                                    <div class="player-info-digit" id="id-digit-3">
+                                        0
+                                    </div>
+                                    <div class="player-info-digit" id="id-digit-4">
+                                        0
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="player-info-row">
+                                <div class="player-info-label">
+                                    uid
+                                </div>
+                                <div class="player-info-value">
+                                    <div class="player-info-digit">
+                                        #
+                                    </div>
+                                    <div class="player-info-digit" id="index-digit-1">
+                                        0
+                                    </div>
+                                    <div class="player-info-digit" id="index-digit-2">
+                                        0
+                                    </div>
+                                    <div class="player-info-digit" id="index-digit-3">
+                                        0
+                                    </div>
+                                    <div class="player-info-digit" id="index-digit-4">
+                                        0
+                                    </div>
+                                    <div class="player-info-digit" id="index-digit-5">
+                                        0
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="player-info-row">
+                                <div class="player-info-discord">
+                                    dc.realmrp.pl
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="logo-container">
+                        <img src="img/logo.png">
+                        <div class="logo-span1">
+                            Realm
+                        </div>
+                        <div class="logo-span2">
+                            WL-OFF
+                        </div>
+                    </div>
+
+                </div>
+                <!-- bodycam -->
+                <div id="bodycam-container">
+                    <div class="bodycam-logo">
+                        <img id="bodycam-img" src="img/police/bodycam.svg">
+                    </div>
+                    <div class="bodycam-info">
+                        <div id="bodycam-row-1" class="bodycam-info-row">
+                            rec <i id="dot" class="fas fa-circle"></i> axon body 3
+                        </div>
+                        <div id="bodycam-row-2" class="bodycam-info-row">
+                            tom flick
+                        </div>
+                        <div id="bodycam-row-3" class="bodycam-info-row">
+                            los santos police department
+                        </div>
+                        <div id="bodycam-info-date">
+                            <span id="bodycam-date">02.02.2022</span> | <span id="bodycam-clock">18:45</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- policenotif -->
+                <div id="polnotif-container">
+                    <div class="polnotif">
+                        <div class="polnotif-flex">
+                            <div class="polnotif-header">
+                                <div class="polnotif-header-code">
+                                    <!-- 10-7 -->
+                                </div>
+                                <div class="polnotif-header-title">
+                                    <!-- Zgłoszenie -->
+                                </div>
+                            </div>
+                            <div class='polnotif-row-phone polnotif-row'>
+                                <div class="polnotif-row-icon polnotif-row-icon-phone">
+                                    <img src="img/faction-notifs/phone.png">
+                                </div>
+                                <div class="polnotif-row-text polnotif-row-text-phone">
+                                    <!-- 420420 -->
+                                </div>
+                            </div>
+                            <div class='polnotif-row-car polnotif-row'> 
+                                <div class="polnotif-row-icon polnotif-row-icon-car">
+                                    <img src="img/faction-notifs/car.png">
+                                </div>
+                                <div class="polnotif-row-text polnotif-row-text-car">
+                                    <!-- 420420 -->
+                                </div>
+                            </div>
+                            <div class='polnotif-row-guard polnotif-row'>
+                                <div class="polnotif-row-icon polnotif-row-icon-guard">
+                                    <img src="img/faction-notifs/guard.png">
+                                </div>
+                                <div class="polnotif-row-text polnotif-row-text-guard">
+                                    <!-- 420420 -->
+                                </div>
+                            </div>
+                            <div class='polnotif-row-gun polnotif-row'> 
+                                <div class="polnotif-row-icon polnotif-row-icon-gun">
+                                    <img src="img/faction-notifs/gun.png">
+                                </div>
+                                <div class="polnotif-row-text polnotif-row-text-gun">
+                                    <!-- 420420 -->
+                                </div>
+                            </div>
+                            <div class='polnotif-row-location polnotif-row'>
+                                <div class="polnotif-row-icon polnotif-row-icon-location">
+                                    <img src="img/faction-notifs/location.png">
+                                </div>
+                                <div class="polnotif-row-text polnotif-row-text-location">
+                                    <!-- 420420 -->
+                                </div>
+                            </div>
+                            <div class='polnotif-row-msg polnotif-row'> 
+                                <div class="polnotif-row-text polnotif-row-text-msg">
+                                    <!-- 420420 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- LEWY DOLNY RÓG  -->
+            <div id="bottom-left-container">
+                <div id="gps-container">
+                    <div class="gps-direction-container">
+                        <img src="img/gps.svg">
+                        <span id="gps-direction">
+                        </span>
+                    </div>
+                    <div class="gps-location-container">
+                        <div id="gps-location-1">
+                        </div>
+                        <div id="gps-location-2">
+                        </div>
+                    </div>
+                </div>
+                <!-- sirens -->
+                <div id="sirens-container">
+                    <div class="sirens-row-1">
+                        <div class="sirens-inner">
+                            <div class="sirens-row-3">
+                                <div class="sirens-mode-btn" id="sirens-mode-1">
+                                    wail
+                                </div>
+                                <div class="sirens-mode-btn" id="sirens-mode-2">
+                                    yelp
+                                </div>
+                                <div class="sirens-mode-btn" id="sirens-mode-3">
+                                    PRC
+                                </div>
+                            </div>
+                            <div class="sirens-row-4">
+                                <div class="sirens-use-btn" id="sirens-horn">
+                                    horn
+                                </div>
+                                <div class="sirens-use-btn" id="sirens-manual">
+                                    manual
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sirens-aux-btn" id="sirens-aux">
+                            aux
+                        </div>
+                    </div>
+                    <div class="sirens-row-2">
+                        <div class="sirens-code-btn active-sirens-code-btn" id="sirens-code-1">
+                            code 1
+                        </div>
+                        <div class="sirens-code-btn" id="sirens-code-2">
+                            code 2
+                        </div>
+                        <div class="sirens-code-btn" id="sirens-code-3">
+                            code 3
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="car-dash">
+                <div id="car-dash-buttons-container">
+                </div>
+
+                <div class="car-dash-values-container">
+                    <div id='car-dash-values-units'>
+                        km/h
+                    </div>
+                    <div id='car-dash-values-speed'>
+                        <div class="car-dash-values-speed-digit" id="speed-digit-1">
+                            0
+                        </div>
+                        <div class="car-dash-values-speed-digit" id="speed-digit-2">
+                            0
+                        </div>
+                        <div class="car-dash-values-speed-digit" id="speed-digit-3">
+                            0
+                        </div>
+                    </div>
+                </div>
+
+                <svg
+                    class="ring-tachometer-bg"
+                    width="26vh"
+                    height="26vh"
+                    >
+                    <circle
+                        id="speedometer-background"
+                        stroke="url('#speed-bg-color')"
+                        stroke-width="1.8vh"
+                        fill="transparent"
+                        r="10vh"
+                        cx="13vh"
+                        cy="13vh"
+                    />
+                    <circle
+                        id="speedometer"
+                        stroke="url('#speed-color')"
+                        stroke-width="1.8vh"
+                        fill="transparent"
+                        r="10vh"
+                        cx="13vh"
+                        cy="13vh"
+                    />
+                    <circle
+                        id="speedometer-bar"
+                        stroke="url('#speed-color')"
+                        stroke-width="2.2vh"
+                        fill="transparent"
+                        r="10vh"
+                        cx="13vh"
+                        cy="13vh"
+                    />
+                    <circle
+                        id="nitro-background"
+                        stroke="url('#speed-bg-color')"
+                        stroke-width="0.5vh"
+                        fill="transparent"
+                        r="8.5vh"
+                        cx="13vh"
+                        cy="13vh"
+                        style="display: none;"
+                    />
+                    <circle
+                        id="nitro"
+                        stroke="url('#speed-color')"
+                        stroke-width="0.5vh"
+                        fill="transparent"
+                        r="8.5vh"
+                        cx="13vh"
+                        cy="13vh"
+                        style="display: none;"
+                    />
+                    <linearGradient id="speed-bg-color" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%"   stop-color="#0000004D"/>
+                        <stop offset="100%" stop-color="#0000004D"/>
+                    </linearGradient>
+                    <linearGradient id="speedometer-bg-color" x1="0%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%"   stop-color="#FFFFFF66"/>
+                        <stop offset="50%" stop-color="#FFFFFF66"/>
+                        <stop offset="50%"   stop-color="#FFFFFF33"/>
+                        <stop offset="100%" stop-color="#FFFFFF33"/>
+                    </linearGradient>
+                    <linearGradient id="speed-color" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%"   stop-color="#FFFFFF"/>
+                        <stop offset="100%" stop-color="#FFFFFF"/>
+                    </linearGradient>
+                </svg>
+            </div>
+
+            <!-- SETTINGSY -->
+            <div id="hud-settings-wrapper" style="display: none;">
+                <div id="hud-settings-container">
+                    <button id="hud-settings-close">
+                        <i class="fal fa-times"></i>
+                    </button>
+                    <div class="hud-settings-header">
+                        <div class="menu-option-square">
+                        </div>
+                        <span>
+                            Ustawienia
+                        </span>
+                    </div>
+                    <div class="hud-settings-title">
+                        Watermark
+                    </div>
+                    <div class="hud-settings-option-container">
+                        <div class="hud-settings-option-title">
+                            <div class="menu-option-square2">
+                            </div>
+                            <span>
+                                Pokazuj watermark przy włączonej komendzie /cam
+                            </span>
+                        </div>
+                        <label class="hud-settings-checkbox-container">
+                            <input type="checkbox">
+                            <div class="hud-settings-checkbox">
+                                <div class="hud-settings-checkbox-unchecked">
+                                    off
+                                </div>
+                                <div class="hud-settings-checkbox-checked">
+                                    on
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="hud-settings-title">
+                        Statystyki postaci
+                    </div>
+                    <div class="hud-settings-option-container">
+                        <div class="hud-settings-option-title">
+                            <div class="menu-option-square2">
+                            </div>
+                            <span>
+                                Pokazuj statystyki postaci
+                            </span>
+                        </div>
+                        <label class="hud-settings-checkbox-container">
+                            <input type="checkbox">
+                            <div class="hud-settings-checkbox">
+                                <div class="hud-settings-checkbox-unchecked">
+                                    off
+                                </div>
+                                <div class="hud-settings-checkbox-checked">
+                                    on
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="hud-settings-option-container">
+                        <div class="hud-settings-option-title">
+                            <div class="menu-option-square2">
+                            </div>
+                            <span>
+                                Pokazuj życie tylko gdy mniejsze niż lub równe
+                            </span>
+                        </div>
+                        <div class="hud-settings-range-container" id="bg-range-health">
+                            <input type="range" min="0" max="100" value="50" class="hud-settings-range" id="range-health">
+                            <div class="hud-settings-range-value" id="val-range-health"></div>
+                        </div>
+                    </div>
+                    <div class="hud-settings-option-container">
+                        <div class="hud-settings-option-title">
+                            <div class="menu-option-square2">
+                            </div>
+                            <span>
+                                coś
+                            </span>
+                        </div>
+                        <div class="hud-settings-range-container" id="bg-range-dupa">
+                            <input type="range" min="0" max="100" value="65" class="hud-settings-range" id="range-dupa">
+                            <div class="hud-settings-range-value" id="val-range-dupa"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id='hint-container'>
+                <div id='hint-title'></div>
+                <div id='hint-content'></div>
+            </div>
+        </div>   
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="bodycam.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
